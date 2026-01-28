@@ -22,6 +22,7 @@ t = 0                 # čas
 v = 0                 # rychlost
 h = 0                 # výška
 m = m0                # aktuální hmotnost
+
 Vw = Vw0              # aktuální objem vody
 V_air0 = Vb - Vw0     # počáteční objem vzduchu
 
@@ -92,4 +93,5 @@ print("Celkový čas letu:", round(t, 2), "s")
 
 print(" ")
 print ("Konec simulace: ______________________________________________________________________")
+
 print(" ")
