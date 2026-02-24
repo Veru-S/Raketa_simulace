@@ -20,13 +20,13 @@ T = 300               # uvažovaná teplota vzduchu (K)
 # ============================================================
 
 ms = 0.244            # suchá hmotnost rakety (kg)
-Vw0 = 0.0004          # počáteční objem vody (m^3) - 200ml
+Vw0 = 0.0002          # počáteční objem vody (m^3) - 200ml/400ml
 Vb = 0.002            # objem lahve (m^3) - 2l
 
 m0 = ms + rho_w * Vw0 # počáteční hmotnost (raketa + voda)
 
 # tlak z pumpy je přetlak → převod z psi na Pa
-p0_psi = 50
+p0_psi = 40                        #30psi/40psi/50psi
 p0_gauge = p0_psi * 6894.76
 p0 = p_atm + p0_gauge     # absolutní tlak v lahvi
 
@@ -38,7 +38,7 @@ A = math.pi * (d_nozzle/2)**2   # průřez trysky (m^2)
 # POČÁTEČNÍ PODMÍNKY
 # ============================================================
 
-dt = 0.0005           # menší krok kvůli vzduchové fázi
+dt = 0.0001           # menší krok kvůli vzduchové fázi
 t = 0
 v = 0
 h = 0
@@ -158,4 +158,5 @@ print("Čas do vyčerpání vody:", round(time_water_end,3),"s")
 print("Celkový čas letu:", round(t,2),"s")
 
 print(" ")
+
 print("Konec simulace: ______________________________________________________________________")
